@@ -15,5 +15,9 @@ The three files required for evaluation are `model.py`, `preprocess.py`, and `mo
 Note: scraping scripts are not included here; data collection methodology is described in the project report.
 
 ## HuggingFace
-Model weights (`model.pt`, `model_final.pt`) and the full training dataset (`classified_headline.csv`) are hosted on HuggingFace as they exceeded GitHub's file size limits:
+Model weights and training dataset are hosted on HuggingFace as they exceeded GitHub's file size limits:
 https://huggingface.co/datasets/PudgySquirrel/cis5190-news-headlines
+
+- `model.pt` — fine-tuned RoBERTa-base backbone only (no SVM)
+- `model_final.pt` — submission file, backbone + SVM coefficients baked in. Load this for inference.
+- `classified_headline.csv` — full training dataset (Fox + NBC, 17,897 headlines)
