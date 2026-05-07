@@ -2,17 +2,18 @@
 
 Binary classification of Fox News vs NBC News headlines using fine-tuned RoBERTa + LinearSVC.
 
-## Files
+## Core Submission Files
+The three files required for evaluation are `model.py`, `preprocess.py`, and `model_final.pt` (available on HuggingFace below).
+
+## Repository Files
 - `model.py` — NewsClassifier class with LinearSVC classification head
 - `preprocess.py` — prepare_data function for inference
 - `model_training_pipeline.ipynb` — full transformer fine-tuning pipeline (RoBERTa, DeBERTa)
 - `svm.py` — trains LinearSVC on top of fine-tuned transformer embeddings
 - `bake_svm.py` — bakes SVM coefficients into model weights for single-file submission
 
-## Model Weights
-Both weight files are available on HuggingFace:
-- `model.pt` — fine-tuned RoBERTa-base backbone weights
-- `model_final.pt` — submission file, same backbone with SVM coefficients baked in
+Note: scraping scripts are not included here; data collection methodology is described in the project report.
 
-## Links
-- HuggingFace Dataset + Weights: https://huggingface.co/datasets/PudgySquirrel/cis5190-news-headlines
+## HuggingFace
+Model weights (`model.pt`, `model_final.pt`) and the full training dataset (`classified_headline.csv`) are hosted on HuggingFace as they exceeded GitHub's file size limits:
+https://huggingface.co/datasets/PudgySquirrel/cis5190-news-headlines
